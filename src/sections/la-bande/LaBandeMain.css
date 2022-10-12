@@ -1,0 +1,54 @@
+/* LA BANDE HOLDER */
+
+.la-bande {
+    padding: 5em 10em;
+}
+
+@media screen and (max-width: 900px){
+    .la-bande {
+        padding: 5em 2em;
+    }
+}
+
+/* LA BANDE CONTENT */
+
+#la-bande-content img {
+    border-radius: 12px;
+    height: 400px;
+    width: 600px;
+}
+
+@media screen and (max-width: 900px){
+    #la-bande-content {
+        flex-direction: column;
+    }
+}
+
+/* LA BANDE HOLDER */
+
+@media screen and (max-width: 900px){
+    #la-bande-holder {
+        align-items: center;
+        padding-bottom: 5em;
+    }
+}
+
+
+/* LA BANDE IMG */
+
+#la-bande-img {
+    padding: 4em 0;
+}
+
+#la-bande-img img {
+    border-radius: 12px;
+    height: 500px;
+    width: 750px;
+}
+
+@media screen and (max-width: 900px){
+    #la-bande-img {
+        flex-direction: column;
+        padding: 0;
+    }
+}

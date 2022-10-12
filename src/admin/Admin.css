@@ -1,0 +1,32 @@
+/* ADMIN LOG */
+
+.admin-log {
+    padding: 20vh 0;
+}
+
+.admin-log h1, .admin-log h2 {
+    text-align: center;
+}
+
+.admin-log .footer-holder {
+    position: fixed;
+    bottom: 0;
+}
+
+/* ADMIN ACCESS */
+
+.admin-access {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.admin-access .MuiFormControl-root {
+    margin-top: 2em;
+    width: 50%;
+}
+
+.admin-access .button {
+    margin-top: 2em;
+}

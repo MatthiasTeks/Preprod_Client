@@ -1,0 +1,97 @@
+/* ARTISTE BANNER */
+
+.artiste-banner {
+    height: 30vh;
+    position: relative;
+    width: 100%;
+}
+
+.artiste-banner img {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+}
+
+.artiste-banner h1 {
+    color: white;
+    position: absolute;
+    left: 1em;
+    bottom: 1em;
+}
+
+/* ARTISTE RESUME */
+
+.artiste-resume {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 2em;
+}
+
+.artiste-resume > p {
+    padding-top: 1em;
+    text-align: justify;
+    text-align-last: start;
+}
+
+.artiste-resume .button {
+    margin: 1em 0;
+}
+
+.artiste-resume > h2 {
+    padding-top: 2em;
+    text-align: left;
+    width: 100%;
+}
+
+.artiste-avis {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.artiste-biography {
+    width: 100%;
+}
+
+@media screen and (max-width: 900px){
+    .artiste-resume {
+        justify-content: center;
+        align-items: center;
+        padding: 0 2em;
+    }
+    .artiste-resume > p {
+        padding-top: 1em;
+        text-align: justify;
+        text-align-last: center;
+    }
+}
+
+/* ARTISTE HOLDER IMG */
+
+.artiste-holder-img {
+    flex-direction: row;
+    align-items: start;
+    margin: 2em 0;
+    width: 100%;
+}
+
+.artiste-holder-img img{
+    border-radius: 6px;
+    height: 450px;
+    width: 450px;
+}
+
+@media screen and (max-width: 900px){
+    .artiste-holder-img {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+    .artiste-holder-img img{
+        border-radius: 6px;
+        height: 200px;
+        width: 200px;
+        margin: 1em 0;
+    }
+}

@@ -1,0 +1,33 @@
+/* FOOTER */
+
+.footer-holder {
+    background: var(--black);
+    height: 10vw;
+    width: 100vw;
+}
+
+.footer {
+    padding: 3em 5em;
+}
+
+@media screen and (max-width: 900px){
+    .footer-holder {
+        height: auto;
+    }
+    .footer {
+        flex-direction: column !important;
+    }
+}
+
+/* FOOTER NAV */
+
+.footer-nav a, .footer-nav p {
+    color: var(--white);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px){
+    .footer-nav a, .footer-nav p {
+        text-align: center;
+    }
+}

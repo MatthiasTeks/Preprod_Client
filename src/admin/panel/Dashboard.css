@@ -1,0 +1,28 @@
+/* DASHBOARD HOME */
+
+.dashboard-home {
+    margin: 3em 0;
+}
+
+/* DASHBOARD MEDIA */
+
+.dashboard-content {
+    background: white;
+    border: 1px solid #1b191910;
+    border-radius: 16px;
+    padding: 2em;
+}
+
+.dashboard-content form {
+    padding: 1em 0;
+}
+
+.dashboard-content > p {
+    align-self: flex-end;
+}
+
+/* DASHBOARD SELECT */
+
+.dashboard-select {
+    padding: 2em 0;
+}

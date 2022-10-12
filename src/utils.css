@@ -1,0 +1,36 @@
+/* MUI SPEED DIAL */
+
+#SpeedDialbasicexample-actions svg {
+    color: var(--black);
+}
+
+.MuiSpeedDial-root > button {
+    border: 1px solid var(--white);
+}
+
+.MuiSpeedDial-fab {
+    width: 70px !important;
+    height: 70px !important;
+}
+
+.MuiSpeedDial-root {
+    position: fixed !important;
+    bottom: 3em !important;
+    right: 3em !important;
+}
+
+.MuiSpeedDial-root svg {
+    color: var(--white);
+}
+
+@media screen and (max-width: 900px){
+    .MuiSpeedDial-fab {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    .MuiSpeedDial-root {
+        position: fixed !important;
+        bottom: 1em !important;
+        right: 1em !important;
+    }
+}

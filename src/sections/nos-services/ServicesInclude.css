@@ -1,0 +1,30 @@
+/* SERVICE INCLUDE */
+
+.service-include {
+    padding: 2em 5em 5em 5em;
+}
+
+@media screen and (max-width: 900px){
+    .service-include {
+        padding: 0 5em 5em 5em;
+    }
+    .service-include > h2 {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* INCLUDE LIST */
+
+#include-list {
+    padding-top: 2em;
+    justify-content: center;
+}
+
+@media screen and (max-width: 900px){
+    #include-list {
+        align-items: center;
+        flex-direction: column;
+        padding-top: 0;
+    }
+}

@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'CooperBold';
+    src: local('CooperBold'), url(./fonts/Cooper/CooperHewitt-Semibold.otf) format('opentype');
+}
+
+:root {
+
+    --white: #F8F8F8;
+    --black: #1B1919;
+    --grey: #D9D9D9;
+
+    --is-1: calc(0.75em + 1.35vw);
+    --is-2: calc(0.75em + 1.25vw);
+    --is-3: calc(0.75em + 1.15vw);
+    --is-4: calc(0.50em + 0.80vw);
+    --is-5: calc(0.45em + 0.60vw);
+
+}
+
+@media screen and (max-width: 1280px){
+    :root {
+        --is-1: calc(1em + 1.25vw);
+        --is-2: calc(1em + 1.5vw);
+        --is-3: calc(0.85em + 1.10vw);
+        --is-4: calc(0.80em + 0.55vw);
+        --is-5: calc(0.80em + 0.45vw);
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html, body {
+    background: var(--white);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, p, a, li, div {
+    color: var(--black);
+    list-style: none;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "CooperBold", sans-serif;
+    letter-spacing: -1px;
+}
+
+p, a, li, div {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+svg {
+    color: var(--black);
+}
+
+@media screen and (max-width: 1023px){
+    html, body {
+        overflow: hidden;
+        overflow-y: auto;
+    }
+}
+
+.isTitle {
+    font-family: "CooperBold", sans-serif;
+    letter-spacing: -1px;
+}
+
+.is1 {
+    font-size: var(--is-1);
+}
+
+.is2 {
+      font-size: var(--is-2);
+}
+
+.is3 {
+    font-size: var(--is-3);
+}
+
+.is4 {
+    font-size: var(--is-4);
+}
+
+.is5 {
+    font-size: var(--is-5);
+}
+
+.is6 {
+    font-size: calc(8px + 0.390625vw);
+}
+
+.is-white {
+    color: var(--white);
+}
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.center {
+    align-items: center;
+}
+
+.start {
+    align-items: flex-start;
+}
+
+.end {
+    align-items: flex-end;
+}
+
+.justifyCenter {
+    justify-content: center;
+}
+
+.justifyStart{
+    justify-content: flex-start;
+}
+
+.justifyEnd {
+    justify-content: flex-end;
+}
+
+.justifyBetween {
+    justify-content: space-between;
+}
+
+.justifyEvenly {
+    justify-content: space-evenly;
+}
+

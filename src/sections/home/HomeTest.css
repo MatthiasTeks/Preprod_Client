@@ -1,0 +1,41 @@
+/* HOME TEST */
+
+.home-test {
+    background: var(--black);
+    padding: 5em 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-test > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-test > div > p {
+    color: var(--white);
+    padding: 2em 0;
+    text-align: center;
+    width: 50%;
+}
+
+.home-test > svg {
+    width: 50%;
+}
+
+/* SVG SPECIFIC */
+
+#home-test-svg-1 {
+    position: absolute;
+    top: -120%;
+    right: -30%;
+}
+
+#home-test-svg-2 {
+    position: absolute;
+    bottom: -120%;
+    left: -20%;
+    transform: rotate(45deg);
+}

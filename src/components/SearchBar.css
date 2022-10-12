@@ -1,0 +1,23 @@
+.search-bar {
+    margin: 0.5em;
+}
+
+.search-bar > .MuiBox-root {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.search-bar > .MuiBox-root > .MuiButton-root {
+    margin: 4px;
+}
+
+@media screen and (max-width: 900px){
+    .search-bar > .MuiBox-root {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

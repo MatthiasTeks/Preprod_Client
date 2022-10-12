@@ -1,0 +1,73 @@
+/* HOME VIDEO CONTAINER */
+
+.home-video {
+    height: 85vh;
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+}
+
+#home-movie {
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+}
+
+/* HOME VIDEO CONTENT */
+
+.home-video-content {
+    height: 100%;
+    padding-bottom: 5em;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.home-video-content h1 {
+    color: var(--white);
+    font-size: 60px;
+    text-align: center;
+    width: 45%;
+}
+
+@media screen and (max-width: 900px){
+    .home-video-content h1 {
+        font-size: 26px;
+        width: 90%;
+    }
+}
+
+/* HOME VIDEO SCROLLING */
+
+.home-video-scrolling {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.scroller {
+    transform: rotate(270deg);
+}
+
+.home-video-scrolling hr {
+    border: 1px solid var(--white);
+    height: 0;
+    width: 100px;
+}
+
+.home-video-scrolling p {
+    cursor: default;
+    color: var(--white);
+    font-size: 18px;
+    padding-left: 2em;
+    -webkit-backface-visibility: hidden;
+}
+
+@media screen and (max-width: 900px){
+    .home-video-scrolling p {
+        font-size: 18px;
+    }
+}
+

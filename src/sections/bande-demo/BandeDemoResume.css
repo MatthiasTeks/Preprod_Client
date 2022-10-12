@@ -1,0 +1,31 @@
+/* BANDE DEMO RESUME */
+
+#bande-demo-resume {
+    padding: 4em 10em;
+}
+
+@media screen and (max-width: 900px){
+    #bande-demo-resume {
+        padding: 2em 2em;
+    }
+}
+
+/* BANDE DEMO RESUME HOLDER */
+
+@media screen and (max-width: 900px){
+    #bande-demo-resume-holder {
+        align-items: center;
+    }
+}
+
+/* BANDE DEMO RESUME CONTENT */
+
+#bande-demo-resume-content {
+    padding-top: 2em;
+}
+
+@media screen and (max-width: 900px){
+    #bande-demo-resume-content p {
+        text-align: center;
+    }
+}

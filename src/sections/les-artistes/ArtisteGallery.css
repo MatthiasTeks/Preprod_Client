@@ -1,0 +1,125 @@
+/* ARTISTE DLB */
+
+.artiste-dlb > .search-bar {
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 900px){
+    .artiste-dlb > .search-bar {
+        justify-content: center;
+    }
+}
+
+/* ARTISTE GALLERY */
+
+.artiste-gallery {
+    min-height: 70vh;
+    padding: 2em;
+}
+
+.artiste-gallery .skeleton-mv, .skeleton-row  {
+    width: 100%;
+}
+
+.artiste-gallery .skeleton-row > span {
+    width: 50%;
+}
+
+.artiste-gallery .skeleton-row > span > .react-loading-skeleton {
+    height: 450px;
+    width: 100%;
+}
+
+.artiste-gallery .MuiImageListItem-root {
+    height: 100% !important;
+}
+
+
+/* ARTISTE BAR */
+
+.artiste-bar {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    left: 0;
+    position: absolute;
+    right: 0;
+    visibility: hidden;
+}
+
+@media screen and (max-width: 900px){
+    .artiste-bar {
+        visibility: visible;
+    }
+}
+
+/* ARTISTE BAR VISIBLE ON HOVER */
+
+.img-actor:hover + .artiste-bar {
+    animation: fadeIn 0.5s ease-in-out forwards;
+    visibility: visible;
+}
+
+.artiste-bar:hover {
+    animation: fadeIn 0.5s ease-in-out forwards;
+    visibility: visible;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ARTISTE NAME */
+
+.artiste-name-holder {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    color: #fff;
+    flex-grow: 1;
+    padding: 4em 1em;
+    overflow: hidden;
+}
+
+.artiste-name {
+    cursor: pointer;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.artiste-name p {
+    color: var(--white);
+    font-size: var(--is-4);
+    line-height: 90px;
+    text-align: center;
+}
+
+.artiste-name p:after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px var(--white);
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+.artiste-name p:hover:after {
+    transform: scaleX(1);
+}
+
+@media screen and (max-width: 900px){
+    .artiste-name-holder {
+        padding: 0 1em;
+    }
+}

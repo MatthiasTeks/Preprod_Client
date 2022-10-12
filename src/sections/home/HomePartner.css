@@ -1,0 +1,24 @@
+/* HOME PARTNER */
+
+.home-partner {
+    background: var(--white);
+    height: 500px;
+    width: 100%;
+    padding: 6em 0;
+}
+
+/* PARTNER HOLDER */
+
+.partner-holder {
+    width: 90%;
+    overflow: hidden;
+}
+
+/* PARTNER CARD */
+
+.partner-card img {
+    height: 250px;
+    width: 250px;
+    margin: 0 2em;
+}
+

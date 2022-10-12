@@ -1,0 +1,32 @@
+.artiste-player-page {
+    padding: 3em 0;
+    height: 100%;
+    width: 100%;
+}
+
+.movie-played-holder-actor {
+    width: 1280px;
+    height: 720px;
+}
+
+.movie-played-header-actor {
+    padding: 0.5em 2em;
+    position: absolute;
+    top: 2%;
+    width: 100%;
+    z-index: 10;
+}
+
+@media screen and (max-width: 1280px){
+    .artiste-player-page {
+        margin-top: 10vh;
+    }
+    .movie-played-holder-actor {
+        width: 100vw;
+        height: 20vh;
+    }
+    .artiste-player-page ~ .footer-holder {
+        position: fixed;
+        bottom: 0;
+    }
+}

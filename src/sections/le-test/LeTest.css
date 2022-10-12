@@ -1,0 +1,57 @@
+.test-title {
+    padding: 2em 2em;
+    position: relative;
+}
+
+.test-title > .MuiStepper-root {
+    padding-top: 2em;
+    width: 70%;
+}
+
+.test-holder {
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2em 0;
+}
+
+#test-container {
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 50vw;
+}
+
+#test-container > h2 {
+    width: 100%;
+    text-align: left;
+}
+
+#test-container > .MuiFormControl-root {
+    margin: inherit;
+}
+
+#test-container .MuiFormControlLabel-root {
+    padding-top: 0.5em;
+}
+
+#test-container > * {
+    text-align: center;
+}
+
+.Mui-required {
+    width: 100%;
+    text-align: left;
+}
+
+#form-submit-test {
+    width: 100%;
+}
+
+#form-submit-test > .MuiFormControl-root {
+    width: 50%;
+}
+
+#form-submit-test .MuiInputLabel-root {
+    padding-top: 0.50em;
+}

@@ -1,0 +1,18 @@
+/* PANEL ADMIN */
+
+.panel-admin {
+    height: 100%;
+    width: 20vw;
+}
+
+/* ADMIN CONTENT */
+
+.admin-content {
+    position: fixed;
+    width: 60vw;
+    height: 100vh;
+    left: 20vw;
+    top: 0;
+    padding: 5em;
+    overflow: auto;
+}

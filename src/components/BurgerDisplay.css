@@ -1,0 +1,79 @@
+/* BURGER DISPLAY */
+
+.burger-display {
+    background: var(--black);
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: width 1s ease-in-out;
+    width: 0;
+    z-index: 11;
+}
+
+.burger-active {
+    width: 100vw;
+}
+
+@media screen and (max-width: 900px){
+    .burger-display {
+        display: block;
+    }
+}
+
+/* BURGER CONTENT */
+
+.burger-content {
+    align-items: center;
+    height: 100%;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.burger-links, .burger-social {
+    animation: 1s apparition 0.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+/* BURGER LINKS */
+
+.burger-links {
+    flex-grow: 1;
+    justify-content: center;
+    width: 100%;
+}
+
+.burger-links a {
+    color: var(--white);
+    font-weight: 400;
+    letter-spacing: -1px;
+    padding: 0.25em;
+    text-align: center;
+    width: 100%;
+}
+
+/* BURGER SOCIAL */
+
+.burger-social {
+    justify-content: space-evenly;
+    padding-bottom: 3em;
+    width: 35%;
+}
+
+.burger-social a {
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    padding: 0.5em;
+}
+
+.burger-social a svg {
+    color: var(--white);
+}
+
+/* EFFECT */
+
+.nav-effect-mobile {
+    border-left: 6px solid white;
+    border-right: 6px solid white;
+}

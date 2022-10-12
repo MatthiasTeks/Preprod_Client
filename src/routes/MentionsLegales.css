@@ -1,0 +1,58 @@
+/* CGU HEADER */
+
+.cgu-header {
+    padding: 5em 10vw 0 10vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.cgu-header > h2 {
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+}
+
+.header-back {
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    flex-direction: row;
+    padding-left: 5vw;
+}
+
+.header-back p {
+    color: var(--white);
+    padding-left: 12px;
+}
+
+/* CGU CONTENT */
+
+.cgu-content {
+    padding: 5vh 10vw;
+    width: 100%;
+}
+
+.cgu-content > div > h3 {
+    padding: 24px 0;
+}
+
+.cgu-content > div > p {
+    padding: 5px 0;
+}
+
+#cgu-bolder {
+    font-weight: bold;
+}
+
+#cgu-link {
+    color: var(--second-color);
+    font-weight: bold;
+}
+
+#cgu-list {
+    list-style: inside;
+}
+
+#cgu-list > li {
+    list-style: inside;
+}

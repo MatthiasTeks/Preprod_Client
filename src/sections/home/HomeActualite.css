@@ -1,0 +1,34 @@
+/* HOME ACTUALITE */
+
+.home-actualite {
+    background: var(--white);
+    width: 100%;
+    margin: 6em 0;
+}
+
+
+/* ACTUALITE HOLDER */
+
+#actualite-holder > div {
+    margin: 0 2em;
+}
+
+@media screen and (max-width: 900px){
+    #actualite-holder {
+        flex-direction: column;
+    }
+    #actualite-holder > div {
+        margin: 2em 0;
+    }
+}
+
+/* ACTUALITE CARD */
+
+.card-resume {
+    padding-top: 1em;
+}
+
+.card-detail {
+    padding-top: 1em;
+    font-size: 12px;
+}

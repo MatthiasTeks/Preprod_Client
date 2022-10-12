@@ -1,0 +1,68 @@
+/* NEWSLETTER */
+
+.newsletter {
+    animation: apparition 1s ease-in-out forwards;
+    background: var(--white);
+    border: 1px solid var(--black);
+    border-radius: 12px;
+    height: 300px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    z-index: 1002;
+}
+
+.newsletter > svg {
+    cursor: pointer;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+@media screen and (max-width: 900px){
+    .newsletter {
+        width: 80vw;
+    }
+}
+
+/* NEWSLETTER CONTENT */
+
+.newsletter-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 2em;
+}
+
+/* NEWSLETTER FORM */
+
+#newsletter-form {
+    padding-top: 1em;
+    width: 100%;
+}
+
+#newsletter-form .MuiFormControl-root {
+    width: 60%;
+}
+
+#newsletter-form > div > p {
+    padding-top: 1em;
+}
+
+@media screen and (max-width: 900px){
+    #newsletter-form .MuiFormControl-root {
+        width: 100%;
+    }
+}
+
+/* UTILS */
+
+.error-email {
+    color: red;
+    font-size: 12px;
+    font-style: italic;
+    text-align: left;
+    width: 60%;
+}

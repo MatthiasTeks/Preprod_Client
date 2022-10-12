@@ -1,0 +1,61 @@
+/* SERVICE NAV */
+
+#service-nav {
+    align-items: center;
+    border-bottom: 1px solid;
+    border-color: rgba(0, 0, 0, 0.12);
+    justify-content: flex-start;
+    padding-top: 2em;
+    margin: 0 2em 2em 2em;
+}
+
+#service-nav > .MuiBox-root {
+    border-bottom: none;
+    flex-grow: 1;
+    padding-left: 1em;
+}
+
+#service-nav > .button {
+    height: 40px;
+    width: 150px;
+}
+
+#service-nav > .button > p {
+    font-size: 16px;
+}
+
+#service-nav > .home-actor-title {
+    padding: 1em;
+}
+
+#service-nav > .home-actor-title > hr {
+   display: none;
+}
+
+@media screen and (max-width: 900px){
+    #service-nav {
+        border: inherit;
+        flex-direction: column;
+        margin: 0 0 2em 0;
+    }
+    #service-nav > .MuiBox-root {
+        border-bottom: 1px solid #1b19191a;
+        border-top: 1px solid #1b19191a;
+        margin: 0 0 2em 0;
+        padding: 2em 0;
+        width: 100%;
+    }
+    #service-nav > .button {
+        display: none;
+    }
+    #service-nav .MuiTabs-flexContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    #service-nav .MuiTabs-indicator {
+        display: none;
+    }
+    #tab-active {
+        font-weight: bold;
+    }
+}

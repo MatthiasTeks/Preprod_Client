@@ -1,0 +1,90 @@
+/* BASES */
+
+.button {
+    border-radius: 8px;
+    cursor: pointer;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 1em;
+    padding: 18px;
+    width: 200px;
+}
+
+.button-low {
+    height: 25px;
+    width: 100px;
+}
+
+.button-low p {
+    font-size: 16px;
+}
+
+.button p {
+    color: white;
+    font-family: "Source Sans Pro", sans-serif;
+    letter-spacing: -1px;
+    transition: color 1s ease-in-out;
+}
+
+@media screen and (max-width: 900px){
+    .button {
+        font-size: 18px;
+        height: 40px;
+        width: 180px;
+    }
+}
+
+/* VARIANT WHITE */
+
+.button-white {
+    background: rgba(27, 25, 25, 0.1);
+    backdrop-filter: blur(12px);
+    border: 2px solid white;
+}
+
+.button-white:hover p {
+    color: #1B1919;
+}
+
+.button-white:after {
+    background: var(--white);
+    bottom: 0;
+    content: "";
+    height: 0;
+    left: 0;
+    position: absolute;
+    transition: all 1s cubic-bezier(0,0,.2,1);
+    width: 100%;
+    z-index: -1;
+}
+
+.button-white:hover:after {
+    height: 200%;
+}
+
+/* VARIANT BLACK */
+
+.button-black {
+    background-color: #1B1919;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.button-black:hover {
+    background-color: #877c7c;
+}
+
+.button-black:after {
+    bottom: 0;
+    content: "";
+    height: 0;
+    left: 0;
+    position: absolute;
+    transition: all 1s cubic-bezier(0,0,.2,1);
+    width: 100%;
+    z-index: 20;
+}
+
+.button-black:hover:after {
+    height: 200%;
+}

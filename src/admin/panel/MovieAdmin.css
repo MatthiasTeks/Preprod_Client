@@ -1,0 +1,26 @@
+/* MOVIE ADMIN CONTENT */
+
+.movie-admin-content {
+    background: white;
+    border: 1px solid #1b191910;
+    border-radius: 16px;
+    padding: 2em;
+}
+
+.movie-admin-content > form {
+    padding-top: 2em;
+}
+
+.movie-admin-content > form > .MuiAutocomplete-root {
+    margin: 1em 0;
+}
+
+/* SEND MOVIE BLOC */
+
+.send-movie-bloc {
+    padding-top: 2em;
+}
+
+.send-movie-bloc > input {
+    padding-top: 0.5em;
+}

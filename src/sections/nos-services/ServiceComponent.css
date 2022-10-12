@@ -1,0 +1,124 @@
+/* SERVICE SEQUENCE */
+
+.service-sequence > p {
+    font-style: italic;
+    justify-content: center;
+    text-align: center;
+}
+
+@media screen and (max-width: 900px){
+    .service-sequence > p {
+        padding: 0 1em;
+    }
+}
+
+/* SERVICE CONTENT HOLDER */
+
+.service-content-holder {
+    justify-content: center;
+}
+
+.service-content-holder > div {
+    margin: 2em;
+    max-width: 500px;
+}
+
+.service-content-holder > .holder-img > div > img {
+    height: 700px;
+    width: 500px;
+    border-radius: 12px;
+}
+
+.service-content-holder > .holder-img .react-loading-skeleton {
+    width: 500px;
+    height: 700px;
+}
+
+
+@media screen and (max-width: 900px){
+    .service-content-holder > div:first-of-type {
+        display: none;
+    }
+    .service-content-holder > div {
+        margin: 2em 0;
+        max-width: 100%;
+    }
+}
+
+/* SERVICE CONTENT */
+
+.service-content > h2 {
+    text-align: right;
+    padding-top: 2em;
+}
+
+.service-content h1 {
+    padding-bottom: 0.25em;
+}
+
+.service-content h3 {
+    padding-top: 1em;
+}
+
+#service-title {
+    padding: inherit;
+    padding-bottom: 2em;
+}
+
+.service-content-card {
+    position: relative;
+    padding-top: 0.5em;
+}
+
+.service-content-card > p {
+    padding-top: 0.5em;
+}
+
+.service-blob {
+    justify-content: flex-end;
+    transform: translateX(50%);
+}
+
+@media screen and (max-width: 900px){
+    .service-content > h1 {
+        text-align: center;
+    }
+    .service-content > h2 {
+        text-align: center;
+        padding-top: 3em;
+    }
+    .service-content > h3, .service-content > p {
+        text-align: center;
+        padding: 0 0.5em;
+    }
+    .service-content > .service-content-card:nth-child(2n) > p, .service-content > .service-content-card:nth-child(2n) > h4, .service-content > .service-content-card:nth-child(2n) > h3 {
+        text-align: end;
+    }
+    .service-content-card {
+        margin-top: 2em;
+        padding: 3em 2em;
+    }
+    .service-blob {
+        transform: inherit;
+    }
+    .service-content-black {
+        background: var(--black);
+    }
+    .service-content-black > p, .service-content-black > h4, .service-content-black > h3 {
+        color: var(--white);
+    }
+}
+
+/* SERVICE BLOB */
+
+.service-blob svg {
+    display: block;
+    width: 60%;
+}
+
+.service-blob svg text {
+    font-size: 8px;
+    fill: white;
+    text-anchor: middle;
+    dominant-baseline: middle;
+}

@@ -1,0 +1,206 @@
+/* NAVBAR */
+
+.navbar {
+    border-bottom: 1px solid #1b191920;
+    height: 15vh;
+    padding: 1em;
+    position: relative;
+    width: 100vw;
+    z-index: 101;
+}
+
+@media screen and (max-width: 900px){
+    .navbar {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .holder-logo img {
+        width: 60vw;
+    }
+}
+
+
+@media screen and (min-width: 900px){
+    .holder-logo {
+        margin-bottom: 2em;
+    }
+    .holder-logo img {
+        width: 30vw;
+    }
+}
+
+/* NAVBAR MAIN */
+
+.navbar-main {
+    text-align: center;
+}
+
+.navbar-main a h1 {
+    transition: 1s color 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 900px){
+    .navbar-main {
+        flex-grow: 1;
+    }
+    .navbar-main a {
+        text-align: left;
+    }
+}
+
+/* NAVBAR LINKS -- only on desktop and big tablet */
+
+#navbar-links {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    color: #fff;
+    flex-grow: 1;
+    padding: 0.5em 1em;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.link-name {
+    cursor: pointer;
+    text-overflow: ellipsis;
+    margin: 0 0.5em;
+    white-space: nowrap;
+}
+
+.link-name p {
+    color: var(--black);
+    font-weight: 600;
+    font-family: "Cooper Hewitt", sans-serif;
+    letter-spacing: -1px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.link-name p:after {
+    display:block;
+    content: '';
+    border-bottom: solid 1px var(--black);
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+.link-name p:hover:after {
+    transform: scaleX(1);
+}
+
+.link-active p:after {
+    transform: scaleX(1);
+}
+
+
+@media screen and (max-width: 900px){
+    #navbar-links {
+        display: none;
+    }
+}
+
+/* NAVBAR SOCIAL -- only on desktop and big tablet */
+
+.navbar-social {
+    padding: 2em;
+    position: absolute;
+    right: 0;
+    transition: visibility 0.5s ease-in-out;
+    visibility: visible;
+}
+
+.navbar-social svg {
+    color: var(--black);
+    font-size: 32px;
+    transition: color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* FIND BETTER WAY TO PIMP SOCIAL ICONS*/
+
+.facebook:hover svg {
+    color: #3982E4;
+}
+
+.instagram:hover svg {
+    color: #FD00AF;
+}
+
+@media screen and (max-width: 900px){
+    .navbar-social {
+        padding: 1em;
+        position: inherit;
+    }
+    .navbar-social svg {
+        font-size: 26px;
+    }
+}
+
+/* NAVBAR BURGER only on mobile and tablet */
+
+.navbar-burger {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+    padding: 0;
+    z-index: 101;
+}
+
+.navbar-burger svg {
+    width: 40px;
+}
+
+.burger-line {
+    fill: none;
+    stroke: var(--black);
+    stroke-width: 6;
+    transition:
+        1s stroke 0.5s ease-in-out,
+        stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1 {
+    stroke-dasharray: 50 207;
+    stroke-width: 6;
+}
+
+.line2 {
+    stroke-dasharray: 50 60;
+    stroke-width: 6;
+}
+
+.line3 {
+    stroke-dasharray: 50 207;
+    stroke-width: 6;
+}
+
+.opened .line1 {
+    stroke: var(--white);
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+
+.opened .line2 {
+    stroke: var(--white);
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+}
+
+.opened .line3 {
+    stroke: var(--white);
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+
+@media screen and (max-width: 900px){
+    .navbar-burger {
+        display: flex;
+    }
+}
