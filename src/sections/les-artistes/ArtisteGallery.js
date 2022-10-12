@@ -56,8 +56,8 @@ const ArtisteGallery = ({ filterActor }) => {
                                 <ImageListItem key={`${item.media}${i}`}>
                                     <img
                                         className="img-actor"
-                                        src={`${(`http://localhost:4242/assets/actor/${item.media}`)}`}
-                                        srcSet={`${(`http://localhost:4242/assets/actor/${item.media}`)}`}
+                                        src={`${(`https://mysql-deploy-preprod.herokuapp.com/assets/actor/${item.media}`)}`}
+                                        srcSet={`${(`https://mysql-deploy-preprod.herokuapp.com/assets/actor/${item.media}`)}`}
                                         alt={item.name}
                                         loading="lazy"
                                     />
