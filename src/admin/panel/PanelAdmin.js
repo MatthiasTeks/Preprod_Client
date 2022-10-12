@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+    import { Outlet } from 'react-router-dom';
 import NavAdmin from "./NavAdmin";
 import Analytics from "./Analytics";
 import './PanelAdmin.css';
