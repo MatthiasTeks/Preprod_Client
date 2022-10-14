@@ -10,12 +10,8 @@ import CallEndIcon from '@mui/icons-material/CallEnd';
 import BurgerDisplay from "./components/BurgerDisplay";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import './utils.css';
 import Newsletter from "./components/Newsletter";
+import './utils.css';
 
 const App = () => {
 

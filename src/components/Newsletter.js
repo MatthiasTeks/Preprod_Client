@@ -1,10 +1,10 @@
+import axios from "axios";
 import {useState} from "react";
 import { Checkbox } from "@mui/material";
 import TextField from '@mui/material/TextField';
-import axios from "axios";
-import './Newsletter.css';
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import Button from "./Button";
+import './Newsletter.css';
 
 const Newsletter = (props) => {
 
@@ -28,7 +28,6 @@ const Newsletter = (props) => {
         setAcceptCaptcha(!acceptCaptcha)
         setChecked(!checked)
     }
-
 
     const isValidEmail = (mail) => {
         return /\S+@\S+\.\S+/.test(mail);

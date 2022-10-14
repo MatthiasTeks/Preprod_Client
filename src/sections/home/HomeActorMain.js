@@ -43,40 +43,25 @@ const HomeActorMain = (props) => {
                     <h1>Ils ont decroche un agent</h1>
                     <hr/>
                 </div>
-                <div className="lel">
-                    { actorList &&
-                        deviceTypeScreen === "desktop" ?
-                            <Carousel wrapAround={true} slidesToShow={3} dragging={true}>
-                                { actorList.map((actor, index) => {
-                                    return (
-                                        <div onDragStart={disableDragging} key={`${actor.name}_${index}`}>
-                                            <img
-                                                alt={actor.name}
-                                                src={`https://mysql-deploy-preprod.herokuapp.com/assets/actor/${actor.media_rounded}`}
-                                            />
-                                            <Link to={`les-artistes/${actor.name}`} className="holder-name flex column justifyCenter center">
-                                                <p className="is5">{actor.name}</p>
-                                            </Link>
-                                        </div>
-                                    )})
-                                }
-                            </Carousel>
-                        :
-                            <Carousel wrapAround={true} slidesToShow={1} dragging={true}>
-                                { actorList.map((actor, index) => {
-                                    return (
-                                        <div onDragStart={disableDragging} key={`${actor.name}_${index}`}>
-                                            <img
-                                                alt={actor.name}
-                                                src={`https://mysql-deploy-preprod.herokuapp.com/assets/actor/${actor.media_rounded}`}
-                                            />
-                                            <Link to={`les-artistes/${actor.name}`} className="holder-name flex column justifyCenter center">
-                                                <p className="is5">{actor.name}</p>
-                                            </Link>
-                                        </div>
-                                    )})
-                                }
-                            </Carousel>
+                <div className="holder-slider">
+                    {actorList &&
+                        <Carousel wrapAround={true} slidesToShow={deviceTypeScreen === "desktop" ? 3 : 1} dragging={true}>
+                            {actorList.map((actor, index) => {
+                                return (
+                                    <div onDragStart={disableDragging} key={`${actor.name}_${index}`}>
+                                        <img
+                                            alt={actor.name}
+                                            src={`https://mysql-deploy-preprod.herokuapp.com/assets/actor/${actor.media_rounded}`}
+                                        />
+                                        <Link to={`les-artistes/${actor.name}`}
+                                              className="holder-name flex column justifyCenter center">
+                                            <p className="is5">{actor.name}</p>
+                                        </Link>
+                                    </div>
+                                )
+                            })
+                            }
+                        </Carousel>
                     }
                 </div>
             </div>

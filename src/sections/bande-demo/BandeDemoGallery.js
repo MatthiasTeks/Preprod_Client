@@ -58,12 +58,12 @@ const BandeDemoGallery = () => {
 
     const filterDemo = () => {
         setInputText("")
-        setFilterActor(actor.filter(actor => actor.type_movie === 'bande-demo'))
+        setFilterActor(actor.filter(actor => actor.type_movie === 'journee'))
     }
 
     const filterTape= () => {
         setInputText("")
-        setFilterActor(actor.filter(actor => actor.type_movie === 'self-tape'))
+        setFilterActor(actor.filter(actor => actor.type_movie === 'sequence'))
     }
 
     const handleClick = (e) => {
@@ -76,7 +76,6 @@ const BandeDemoGallery = () => {
     }
 
     const fetchData = () => {
-        console.log('lel')
         fetch("https://mysql-deploy-preprod.herokuapp.com/actor")
             .then((resp) => resp.json())
             .then((data) => {
@@ -128,18 +127,12 @@ const BandeDemoGallery = () => {
                     <div className="skeleton-row">
                         <Skeleton />
                         <Skeleton />
-                        <Skeleton />
-                        <Skeleton />
                     </div>
                     <div className="skeleton-row skeleton-mobile-disappear">
                         <Skeleton />
                         <Skeleton />
-                        <Skeleton />
-                        <Skeleton />
                     </div>
                     <div className="skeleton-row skeleton-mobile-disappear">
-                        <Skeleton />
-                        <Skeleton />
                         <Skeleton />
                         <Skeleton />
                     </div>

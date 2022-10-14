@@ -31,15 +31,21 @@ const ArtisteGallery = ({ filterActor }) => {
             <div className="artiste-gallery">
                 { filterActor.length === 0 ?
                     <div className="skeleton-mv flex column justifyCenter center">
-                        <div className="skeleton-row flex row justifyCenter center">
+                        <div className="skeleton-row">
+                            <Skeleton />
+                            <Skeleton />
                             <Skeleton />
                             <Skeleton />
                         </div>
-                        <div className="skeleton-row flex row justifyCenter center">
+                        <div className="skeleton-row skeleton-mobile-disappear">
+                            <Skeleton />
+                            <Skeleton />
                             <Skeleton />
                             <Skeleton />
                         </div>
-                        <div className="skeleton-row flex row justifyCenter center">
+                        <div className="skeleton-row skeleton-mobile-disappear">
+                            <Skeleton />
+                            <Skeleton />
                             <Skeleton />
                             <Skeleton />
                         </div>

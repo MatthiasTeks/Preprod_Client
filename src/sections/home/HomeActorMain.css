@@ -8,10 +8,6 @@
 
 /* HOME ACTOR TITLE */
 
-.holder-swiper {
-    width: 100%;
-}
-
 .home-actor-title {
     text-align: center;
     padding-bottom: 3em;
@@ -26,39 +22,7 @@
 
 /* HOME ACTOR LIST */
 
-.home-actor-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 50%
-}
-
-.swiper-slide > a {
-    position: relative;
-    height: inherit;
-    width: auto;
-}
-
-.actor-home-rounded {
-    position: relative;
-    height: inherit;
-    margin: 0.25em;
-    width: auto;
-}
-
-.actor-home-rounded img {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.image-item {
-    padding: 20px 0 20px 20px;
-}
-
-.lel {
+.holder-slider {
     margin: auto;
     width: 50vw;
 }

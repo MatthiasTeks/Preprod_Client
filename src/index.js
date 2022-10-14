@@ -6,22 +6,19 @@ import App from './App';
 import Admin from './admin/Admin';
 import RequireAuth from "./admin/RequireAuth";
 import PanelAdmin from "./admin/panel/PanelAdmin";
-import Home from './routes/Home.js';
-import LaBande from "./routes/LaBande";
-import BandeDemo from "./routes/BandeDemo";
-import NosServices from "./routes/NosServices";
-import LesArtistes from "./routes/LesArtistes";
-import LeTestDlb from "./routes/LeTestDlb";
-import Artiste from './sections/les-artistes/Artiste';
 import Dashboard from "./admin/panel/Dashboard";
 import MovieAdmin from "./admin/panel/MovieAdmin";
 import ActeurAdmin from "./admin/panel/ActeurAdmin";
+import Home from './routes/Home.js';
+import LaBande from "./routes/LaBande";
+import BandeDemo from "./routes/BandeDemo";
+import LesArtistes from "./routes/LesArtistes";
 import ArtistePlayer from "./routes/ArtistePlayer/ArtistePlayer";
+import MentionsLegales from "./routes/MentionsLegales";
+import Artiste from './sections/les-artistes/Artiste';
 import 'react-loading-skeleton/dist/skeleton.css'
 import './keyframes.css';
 import './style.css';
-import MentionsLegales from "./routes/MentionsLegales";
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

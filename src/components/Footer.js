@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import LogoMin from '../assets/logo_min.webp';
 import './Footer.css';
 
 const Footer = (props) => {
@@ -11,16 +12,7 @@ const Footer = (props) => {
                     <p onClick={() => props.setNewsletterOpen(!props.newsletterOpen)}>NEWSLETTER</p>
                     <p>CONTACT</p>
                 </div>
-                {/*<div className="footer-newsletter flex column center">*/}
-                {/*    <div className="flex column justifyStart">*/}
-                {/*        <h2>NEWSLETTER</h2>*/}
-                {/*        <form id="newsletter-form" className="flex row" onSubmit={(e) => handleSubmit(e)}>*/}
-                {/*            <input type="text" placeholder="Ton email" onChange={(e) => setMail(e.target.value)}/>*/}
-                {/*            <Checkbox checked={checked} onChange={handleToggle} name="checkbox1" />*/}
-                {/*            <button type="submit">Envoyer</button>*/}
-                {/*        </form>*/}
-                {/*    </div>*/}
-                {/*</div>*/}
+                <img src={LogoMin} alt="Logo miniature of Les Films de la Bande"/>
             </div>
         </div>
     )

@@ -1,8 +1,8 @@
 import { Link, NavLink } from 'react-router-dom';
 import { NavList } from "../utils/data/NavList";
 import { SocialList } from '../utils/data/SocialList';
-import Logo from '../assets/logo.png';
-import LogoWhite from '../assets/logo_white.png';
+import Logo from '../assets/logo.webp';
+import LogoWhite from '../assets/logo_white.webp';
 import './Navbar.css';
 
 const Navbar = ({ burgerOpen, setBurgerOpen }) => {
