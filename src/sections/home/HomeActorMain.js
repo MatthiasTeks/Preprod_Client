@@ -1,34 +1,37 @@
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, EffectCoverflow } from 'swiper';
-import { motion } from "framer-motion";
+import Carousel from "nuka-carousel";
 import './HomeActorMain.css';
 
 const HomeActorMain = () => {
 
     const [actorList, setActorList] = useState([]);
-    const [dimensions, setDimensions] = useState({
-        height: window.innerHeight,
-        width: window.innerWidth
-    })
+    const [deviceTypeScreen, setDeviceTypeScreen] = useState("");
+
+    const getDeviceType = () => {
+        const ua = navigator.userAgent;
+        if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+            return "tablet";
+        }
+        if (
+            /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+                ua
+            )
+        ) {
+            return "mobile";
+        }
+        return "desktop";
+    };
+
+    const disableDragging = (e) => {
+        e.preventDefault();
+        return false;
+    }
+
 
     useEffect(() => {
-        function handleResize() {
-            setDimensions({
-                height: window.innerHeight,
-                width: window.innerWidth
-            })
-
-        }
-
-        window.addEventListener('resize', handleResize)
-
-        return _ => {
-            window.removeEventListener('resize', handleResize)
-
-        }
-    })
+        setDeviceTypeScreen(getDeviceType())
+    }, [])
 
     useEffect(() => {
         fetch("https://mysql-deploy-preprod.herokuapp.com/home/actor")
@@ -42,96 +45,42 @@ const HomeActorMain = () => {
                     <h1>Ils ont decroche un agent</h1>
                     <hr/>
                 </div>
-                { actorList &&
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ ease: "linear", duration: 1}}
-                        viewport={{ once: true }}
-                        className="holder-swiper flex row justifyCenter center"
-                    >
-                        <div className="home-actor-list">
-                            { dimensions.width > 900 ?
-                                <Swiper
-                                    navigation={true}
-                                    effect={"coverflow"}
-                                    grabCursor={true}
-                                    loop={true}
-                                    coverflowEffect={{
-                                        rotate: 50,
-                                        stretch: 0,
-                                        depth: 100,
-                                        modifier: 1,
-                                        slideShadows: false,
-                                    }}
-                                    modules={[Navigation, EffectCoverflow]}
-                                    spaceBetween={10}
-                                    breakpoints={{
-                                        // when window width is >= 900px
-                                        900: {
-                                            width: 900,
-                                            slidesPerView: 3,
-                                        }
-                                    }}
-                                >
-                                    {
-                                        actorList.map((actor, index) => {
-                                            return (
-                                                <SwiperSlide key={`${actor.name}_${index}`} style={{height: "300px"}}>
-                                                    <Link to={`les-artistes/${actor.name}`} >
-                                                        <div className="actor-home-rounded">
-                                                            <img
-                                                                alt={actor.name}
-                                                                src={`https://mysql-deploy-preprod.herokuapp.com/assets/actor/${actor.media_rounded}`}
-                                                            />
-                                                            <div className="holder-name flex column center justifyCenter">
-                                                                <p className="is5">{actor.name}</p>
-                                                            </div>
-                                                        </div>
-                                                    </Link>
-                                                </SwiperSlide>
-                                            )
-                                        })
-                                    }
-                                </Swiper>
-                                :
-                                <Swiper
-                                    navigation={true}
-                                    grabCursor={true}
-                                    loop={true}
-                                    modules={[Navigation]}
-                                    spaceBetween={10}
-                                    breakpoints={{
-                                        100: {
-                                            width: 100,
-                                            slidesPerView: 1,
-                                        }
-                                    }}
-                                >
-                                    {
-                                        actorList.map((actor, index) => {
-                                            return (
-                                                <SwiperSlide key={`${actor.name}_${index}`} style={{height: "300px"}}>
-                                                    <Link to={`les-artistes/${actor.name}`} >
-                                                        <div className="actor-home-rounded">
-                                                            <img
-                                                                alt={actor.name}
-                                                                src={`https://mysql-deploy-preprod.herokuapp.com/assets/actor/${actor.media_rounded}`}
-                                                            />
-                                                            <div className="holder-name flex column center justifyCenter">
-                                                                <p className="is5">{actor.name}</p>
-                                                            </div>
-                                                        </div>
-                                                    </Link>
-                                                </SwiperSlide>
-                                            )
-                                        })
-                                    }
-                                </Swiper>
-                            }
-                        </div>
-                    </motion.div>
-                }
+                <div className="lel">
+                    { actorList &&
+                        deviceTypeScreen === "desktop" ?
+                            <Carousel wrapAround={true} slidesToShow={3} dragging={true}>
+                                { actorList.map((actor, index) => {
+                                    return (
+                                        <div onDragStart={disableDragging} key={`${actor.name}_${index}`}>
+                                            <img
+                                                alt={actor.name}
+                                                src={`https://mysql-deploy-preprod.herokuapp.com/assets/actor/${actor.media_rounded}`}
+                                            />
+                                            <Link to="lel" className="holder-name flex column justifyCenter center">
+                                                <p className="is5">{actor.name}</p>
+                                            </Link>
+                                        </div>
+                                    )})
+                                }
+                            </Carousel>
+                        :
+                            <Carousel wrapAround={true} slidesToShow={1} dragging={true}>
+                                { actorList.map((actor, index) => {
+                                    return (
+                                        <div onDragStart={disableDragging} key={`${actor.name}_${index}`}>
+                                            <img
+                                                alt={actor.name}
+                                                src={`https://mysql-deploy-preprod.herokuapp.com/assets/actor/${actor.media_rounded}`}
+                                            />
+                                            <Link to="lel" className="holder-name flex column justifyCenter center">
+                                                <p className="is5">{actor.name}</p>
+                                            </Link>
+                                        </div>
+                                    )})
+                                }
+                            </Carousel>
+                    }
+                </div>
             </div>
     )
 }

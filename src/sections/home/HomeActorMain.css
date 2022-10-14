@@ -54,15 +54,45 @@
     object-fit: cover;
 }
 
+.image-item {
+    padding: 20px 0 20px 20px;
+}
+
+.lel {
+    margin: auto;
+    width: 50vw;
+}
+
+.slide, .slide div {
+    height: 250px !important;
+    margin: auto;
+}
+
+.slide > div {
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-control-bottomcenter {
+    display: none !important;
+}
+
 /* HOLDER NAME */
 
 .holder-name {
     background: #1b191970;
     backdrop-filter: blur(1px);
+    left: 0;
     position: absolute;
     bottom: 0;
     height: 20%;
     width: 100%;
+    z-index: 101;
 }
 
 .holder-name p {
