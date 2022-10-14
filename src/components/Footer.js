@@ -12,7 +12,7 @@ const Footer = (props) => {
                     <p onClick={() => props.setNewsletterOpen(!props.newsletterOpen)}>NEWSLETTER</p>
                     <p>CONTACT</p>
                 </div>
-                <img src={LogoMin} alt="Logo miniature of Les Films de la Bande"/>
+                {/*<img src={LogoMin} alt="Logo miniature of Les Films de la Bande"/>*/}
             </div>
         </div>
     )
