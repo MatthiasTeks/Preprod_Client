@@ -11,7 +11,7 @@ import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import SearchBar from "../../components/SearchBar";
 import './BandeDemoGallery.css';
 
-const BandeDemoGallery = (props) => {
+const BandeDemoGallery = () => {
 
     /* DATA COLLECT */
     const [actor, setActor] = useState([]);

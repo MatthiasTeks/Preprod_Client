@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { SpeedDial, SpeedDialAction } from "@mui/material";
@@ -16,7 +16,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import './utils.css';
 import Newsletter from "./components/Newsletter";
-import {useEffect} from "@types/react";
 
 const App = () => {
 
