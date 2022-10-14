@@ -6,11 +6,30 @@ import './HomeActorMain.css';
 const HomeActorMain = (props) => {
 
     const [actorList, setActorList] = useState([]);
+    const [deviceTypeScreen, setDeviceTypeScreen] = useState("");
 
     const disableDragging = (e) => {
         e.preventDefault();
         return false;
     }
+    const getDeviceType = () => {
+        const ua = navigator.userAgent;
+        if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+            return "tablet";
+        }
+        if (
+            /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+                ua
+            )
+        ) {
+            return "mobile";
+        }
+        return "desktop";
+    };
+
+    useEffect(() => {
+        setDeviceTypeScreen(getDeviceType())
+    }, [])
 
     useEffect(() => {
         fetch("https://mysql-deploy-preprod.herokuapp.com/home/actor")
@@ -26,7 +45,7 @@ const HomeActorMain = (props) => {
                 </div>
                 <div className="lel">
                     { actorList &&
-                        props.deviceTypeScreen === "desktop" ?
+                        deviceTypeScreen === "desktop" ?
                             <Carousel wrapAround={true} slidesToShow={3} dragging={true}>
                                 { actorList.map((actor, index) => {
                                     return (
