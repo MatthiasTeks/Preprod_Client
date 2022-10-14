@@ -11,7 +11,7 @@ import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import SearchBar from "../../components/SearchBar";
 import './BandeDemoGallery.css';
 
-const BandeDemoGallery = () => {
+const BandeDemoGallery = (props) => {
 
     /* DATA COLLECT */
     const [actor, setActor] = useState([]);
@@ -33,6 +33,7 @@ const BandeDemoGallery = () => {
     const matches = useMediaQuery('(min-width:900px)');
 
     const handleOpen = (movie) => {
+        window.scrollTo(0, 0)
         setOpen(true);
         setMovieOpen(movie)
     }
@@ -124,19 +125,19 @@ const BandeDemoGallery = () => {
             </div>
             { filterActor.length === 0 ?
                 <div className="skeleton-mv flex column justifyCenter center">
-                    <div className="skeleton-row flex row justifyCenter center">
+                    <div className="skeleton-row">
                         <Skeleton />
                         <Skeleton />
                         <Skeleton />
                         <Skeleton />
                     </div>
-                    <div className="skeleton-row flex row justifyCenter center">
+                    <div className="skeleton-row skeleton-mobile-disappear">
                         <Skeleton />
                         <Skeleton />
                         <Skeleton />
                         <Skeleton />
                     </div>
-                    <div className="skeleton-row flex row justifyCenter center">
+                    <div className="skeleton-row skeleton-mobile-disappear">
                         <Skeleton />
                         <Skeleton />
                         <Skeleton />

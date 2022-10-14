@@ -63,7 +63,7 @@ const ArtisteGallery = ({ filterActor }) => {
                                     />
                                     <div className="artiste-bar">
                                         <div className="artiste-name-holder">
-                                            <Link to={`${item.name}`}>
+                                            <Link to={`${item.name}`} onClick={() => window.scrollTo(0, 0)}>
                                                 <div className="artiste-name flex row justifyCenter center">
                                                     <p>
                                                         {item.name}

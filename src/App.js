@@ -16,11 +16,28 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import './utils.css';
 import Newsletter from "./components/Newsletter";
+import {useEffect} from "@types/react";
 
 const App = () => {
 
     const [burgerOpen, setBurgerOpen] = useState(false);
     const [newsletterOpen, setNewsletterOpen] = useState(false);
+    const [deviceTypeScreen, setDeviceTypeScreen] = useState("");
+
+    const getDeviceType = () => {
+        const ua = navigator.userAgent;
+        if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+            return "tablet";
+        }
+        if (
+            /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+                ua
+            )
+        ) {
+            return "mobile";
+        }
+        return "desktop";
+    };
 
     /* THEME INIT MUI REACT */
     const theme = createTheme({
@@ -41,12 +58,16 @@ const App = () => {
         { icon: <a className="flex row justifyCenter center" href="https://www.instagram.com/lesfilmsdelabande/" rel="noreferrer" target="_blank"><InstagramIcon /></a>, name: 'Instagram'},
     ];
 
+    useEffect(() => {
+        setDeviceTypeScreen(getDeviceType())
+    }, [])
+
     return (
         <ThemeProvider theme={theme}>
             <div className="mv-app">
                 <BurgerDisplay burgerOpen={burgerOpen} setBurgerOpen={setBurgerOpen}/>
                 <Navbar burgerOpen={burgerOpen} setBurgerOpen={setBurgerOpen} />
-                <Outlet context={[burgerOpen, setBurgerOpen]} />
+                <Outlet context={[burgerOpen, setBurgerOpen, deviceTypeScreen]} />
                 <Footer newsletterOpen={newsletterOpen} setNewsletterOpen={setNewsletterOpen} />
                 { burgerOpen === false ?
                     <SpeedDial

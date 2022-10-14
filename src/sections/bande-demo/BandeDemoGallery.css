@@ -172,3 +172,23 @@
     height: 100%;
     z-index: 1001;
 }
+
+/* SKELETON */
+
+.skeleton-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 900px){
+    .skeleton-row  {
+        flex-direction: column;
+    }
+    .skeleton-mobile-disappear {
+        display: none;
+    }
+}
+
+

@@ -3,35 +3,14 @@ import { Link } from 'react-router-dom';
 import Carousel from "nuka-carousel";
 import './HomeActorMain.css';
 
-const HomeActorMain = () => {
+const HomeActorMain = (props) => {
 
     const [actorList, setActorList] = useState([]);
-    const [deviceTypeScreen, setDeviceTypeScreen] = useState("");
-
-    const getDeviceType = () => {
-        const ua = navigator.userAgent;
-        if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
-            return "tablet";
-        }
-        if (
-            /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
-                ua
-            )
-        ) {
-            return "mobile";
-        }
-        return "desktop";
-    };
 
     const disableDragging = (e) => {
         e.preventDefault();
         return false;
     }
-
-
-    useEffect(() => {
-        setDeviceTypeScreen(getDeviceType())
-    }, [])
 
     useEffect(() => {
         fetch("https://mysql-deploy-preprod.herokuapp.com/home/actor")
@@ -47,7 +26,7 @@ const HomeActorMain = () => {
                 </div>
                 <div className="lel">
                     { actorList &&
-                        deviceTypeScreen === "desktop" ?
+                        props.deviceTypeScreen === "desktop" ?
                             <Carousel wrapAround={true} slidesToShow={3} dragging={true}>
                                 { actorList.map((actor, index) => {
                                     return (
@@ -56,7 +35,7 @@ const HomeActorMain = () => {
                                                 alt={actor.name}
                                                 src={`https://mysql-deploy-preprod.herokuapp.com/assets/actor/${actor.media_rounded}`}
                                             />
-                                            <Link to="lel" className="holder-name flex column justifyCenter center">
+                                            <Link to={`les-artistes/${actor.name}`} className="holder-name flex column justifyCenter center">
                                                 <p className="is5">{actor.name}</p>
                                             </Link>
                                         </div>
@@ -72,7 +51,7 @@ const HomeActorMain = () => {
                                                 alt={actor.name}
                                                 src={`https://mysql-deploy-preprod.herokuapp.com/assets/actor/${actor.media_rounded}`}
                                             />
-                                            <Link to="lel" className="holder-name flex column justifyCenter center">
+                                            <Link to={`les-artistes/${actor.name}`} className="holder-name flex column justifyCenter center">
                                                 <p className="is5">{actor.name}</p>
                                             </Link>
                                         </div>

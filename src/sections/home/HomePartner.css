@@ -12,13 +12,14 @@
 .partner-holder {
     width: 90%;
     overflow: hidden;
+    height: 200px;
 }
 
 /* PARTNER CARD */
 
-.partner-card img {
-    height: 250px;
-    width: 250px;
+.partner-card {
+    height: 150px;
+    width: auto;
     margin: 0 2em;
 }
 

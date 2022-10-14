@@ -20,12 +20,10 @@ const HomePartner = () => {
             </div>
             <div className="partner-holder flex row justifyCenter center">
                 <Marquee gradient={false}>
-                    { partnerList &&
+                    { partnerList.length &&
                         partnerList.map((partner, i) => {
                             return (
-                                <div className="partner-card" key={`${partner.name}${i}`}>
-                                    <img src={`https://mysql-deploy-preprod.herokuapp.com/assets/partner/${partner.media}`} alt={partner.name}/>
-                                </div>
+                                <img key={`${partner.name}${i}`} className="partner-card" src={`https://mysql-deploy-preprod.herokuapp.com/assets/partner/${partner.media}`} alt={partner.name}/>
                             )
                         })
                     }
